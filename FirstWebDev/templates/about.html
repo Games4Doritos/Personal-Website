@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link rel="stylesheet" href = "{{url_for('static', filename='portStyles.css')}}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <title>About</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <canvas id="animBack" style="height:100%;margin-bottom:50px"></canvas>
+        <div class="whiteDiv" style="margin-bottom:50px;">
+            <h1>About me!</h1>
+            <a href="/home">
+                <button class="pages">Home</button>
+            </a>
+            <a href="/projects"> 
+                <button class="pages">Projects</button>
+            </a>
+            <a href="/about">
+                <button class="pages" style="margin-bottom:30px">About</button>
+            </a><br>
+            I'm a student at UWA based in Western Australia, studying a Bachelor of Advanced Computer Science (AI), that has had an interest in Game Development and coding since high school! 
+            I have picked up web development recently, which is why I'm making this and many more web applications to come. I'm also involved with a few clubs at UWA, notably <i>UWA Game Development</i> (Committe Member) 
+            and <i>Coders for Causes</i> (hopefully a committe member in the future!) I hope to show my journey into tech with things like this, so please follow along!
+        </div>
+        <div class="credentials" style="margin-bottom:50px;">
+            <h1>Experience</h1>
+            <div class="project">
+                <h2>Crew Member, McDonald's Currambine <span style="font-size:20px">July 2024 - September 2025</span></h2>
+                Managed the kitchen line efficiently and effectively to ensure smooth customer experience and minimal waiting time, all in a fast-paced environment.
+                Organized the stock of products and ingredients while off the line in, coordination with my co-workers, also taking on any external tasks around the restaurant.
+                Constantly maintained strong and direct communication with co-workers in the kitchen, as well as all other parts of the restaurant when necessary.
+            </div>
+            
+        </div>
+        <div class="credentials" style="margin-bottom:50px;">
+            <h1>Education</h1>
+            <div class="project">
+                <h2>Bachelor of Advanced Computer Science (Honours), Artificial Intelligence</h2>
+                <h3>University of Western Australia 2024 - 2027</h3>
+                Currently a second year, holding a GPA of 6.667 and a WAM (Degree Average) of 84.75
+            </div>
+            <div class="project">
+                <h2>Newman College Perth <span style="font-size:20px">2018 - 2023</span></h2>
+                Graduated and achieved an ATAR of 94.65 studying Physics, Chemistry, English, Maths Applications and Economics ATAR
+            </div>
+        </div>
+        <div class="credentials">
+            <h1>Awards</h1>
+            <div class="project">
+                1st place at the <i>Coders for Causes 2025 Hack for Homes</i> Hackathon
+            </div>
+            <br>
+            More things to come!
+        </div>
+    </body>
+    <script src="{{url_for('static', filename='portfolio.js')}}"></script>
+</html>
