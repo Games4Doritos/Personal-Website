@@ -96,13 +96,16 @@ export default function Page() {
           (<SocialIcon url={link} key={id} className="p-10 m-4"/>)
         )}
       </div>
-      <div className="text-xl text-white mx-auto">
-        <div className="flex justify-center">
-          <MovingText text="^"></MovingText>
-        </div>
-        <div className="flex justify-center">
-          My Links
-        </div>
+      <div className="text-xl text-white flex justify-center">
+          <MovingText 
+            text={
+              <>
+                <div className="flex justify-center">^</div>
+                <div className="flex justify-center">My Links</div>
+              </>
+          }
+          >
+          </MovingText>
       </div>
       <div className="bg-white p-5"></div>
     </>

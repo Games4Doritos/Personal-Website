@@ -1,6 +1,7 @@
 "use client"
 import {motion} from "framer-motion"
 import Image from "next/image";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 interface props{
     width: string;
@@ -8,17 +9,10 @@ interface props{
 
 export default function FluidBody({width}: props){
 
-    const waveSegments = 3;
-    const pulseStart = 10;  
-    /*const [, animate] = useAnimate()
-    useEffect(()=>{
-        const controls = animate([
-            ["p", {y: [0,-50,0]}, {delay: stagger(0.01), ease:"easeInOut"}],
-        ])
-        controls.speed = 0.3
+    const winW = useWindowWidth();
 
-        return () => controls.stop()
-    }, []) */
+    const waveSegments = winW < 768 ? 2: 3
+    const pulseStart = 10;  
     const waveSegment =  (
         <>
             {[...Array(20)].map((part, id) => (
@@ -48,8 +42,10 @@ export default function FluidBody({width}: props){
                 height: `${diameter}rem`
             }}
             animate={{
-                y:["24rem", `-${13+diameter}rem`],
-            
+                y:["20rem", `-${16+diameter}rem`],
+                //y ranges from -h/2 to h/2
+                //bubbles will start from h/2 + max_diameter + 1 and go up to -h/2 - 1 - diameter
+                //all in rem
             }}
             transition={{
                 ease:"easeIn",
@@ -66,33 +62,19 @@ export default function FluidBody({width}: props){
     return (
         <>
             <div style={{width:width}} className="m-0">
-                {waveSegment}
-                {waveSegment}
-                {waveSegment}
-                {/*
-                <motion.div
-                    className="h-72 w-full bg-(--alt) relative inline-block m-0"
-                    animate={{
-                        "--x": [0,1],
-                    }}
-                    transition={{
-                        "--x":{
-                            repeat: Infinity,
-                            repeatType: 'loop',
-                            ease: 'linear',
-                            duration:2
-                        },
-                    }}
-                    style={{
-                        background:"radial-gradient(circle at calc(var(--x)*100%) calc(50% + sin(var(--x)*360deg)*30%),  white -10%, var(--alt) 10%)",
-                    }}
-                >
-                </motion.div>
-                */}
+                <div key={waveSegments}>
+                    {[...Array(waveSegments)].map((segment, id) => (
+                        <span key={id}>
+                            {waveSegment}
+                        </span>
+                    )
+                    )}
+                </div>
                 <div 
-                    className="h-96 w-full bg-(--alt) flex justify-evenly m-0 overflow-clip items-center"
+                    className="h-120 w-full bg-(--alt) flex justify-evenly m-0 overflow-clip items-center"
                 >
-                    <motion.div className="absolute z-1 aspect-5/3 max-w-1/2 max-h-72"
+                    <motion.div className="absolute z-1 max-w-1/2 max-h-72"
+                        //max height of image will be 3/5 * h
                         animate={{
                             y:[10,-10,10],
                         }}
@@ -104,11 +86,11 @@ export default function FluidBody({width}: props){
                         }}
                     >
                         <Image
-                            src="/gameJam.png"
-                            width={2254}
-                            height={1419}
+                            src="/me.jpg"
+                            width={598}
+                            height={344}
                             alt=""
-                            className=""
+                            className="border-2 border-black border-double rounded-xl"
                         >
                         </Image>
                     </motion.div>

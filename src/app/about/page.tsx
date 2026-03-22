@@ -10,7 +10,7 @@ export default function About(){
         `University Student studying a Bachelor of Advanced Computer Science (Honours) 
         at The University of Western Australia, majoring in Artificial Intelligence`,
         `Ordinary Committee Member (Projects) for Game Development UWA`,
-        `Very interested in making games and websites, and DSA!`
+        `Very interested in making games, websites, and software!`
     ];
 
     type dripstone = {
@@ -19,12 +19,12 @@ export default function About(){
     }
 
     const dripStones: dripstone[] = [
-        {duration: 2, width: "6rem"},
-        {duration: 1, width: "4rem"},
+        {duration: 2, width: "7rem"},
+        {duration: 1, width: "6rem"},
         {duration: 4, width: "10rem"},
         {duration: 2, width: "6rem"},
         {duration: 3, width: "8rem"},
-        {duration: 2, width: "6rem"}
+        {duration: 2, width: "7rem"}
     ];
     //calculating total width of all dripStones to determine the percentage width 
     //that they will have when the element gets short enough

@@ -1,14 +1,15 @@
 "use client"
 import {motion} from"framer-motion"
 import "react"
+import { ReactElement } from "react";
 interface props{
-    text:string;
+    text:ReactElement;
 }
 
 export default function MovingText({text}:props){
     
     return (
-        <motion.div className="inline-block relative text-white top-2"
+        <motion.div className="inline-block relative text-white mb-1"
             animate={{
                 y:[0,-20,0]
             }}
@@ -21,8 +22,6 @@ export default function MovingText({text}:props){
         >
         {text}
         </motion.div>
-
-
     );
 
 }
