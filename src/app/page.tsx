@@ -1,10 +1,11 @@
 "use client"
+
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
-import React from "react";
 import {SocialIcon} from "react-social-icons";
 import MovingText from "../components/movingText";
-
+import useWindowWidth from "../hooks/useWindowWidth";
+import useSpam from "../hooks/useSpam";
+import useIndex from "../hooks/useIndex";
 
 const cycleImages: string[] = ["/gameJam.png" ,"/leetShot.png", "/reactScreenshot.png"];
 const imageDims: [number,number][] = [[2254,1419], [1324,784], [2182,1378]]
@@ -15,19 +16,15 @@ const links = ["https://github.com/games4doritos", "https://www.linkedin.com/in/
 let n: number = cycleImages.length;
 
 export default function Page() {
-  const [index, setIndex] = useState(0);
-  const [winW, setW] = useState(768);
+  
+  /*const [winW, setW] = useState(768);
   const [spamPos, setSpam] = useState(0);
   const [arrowKey, setArrow] = useState(0);
-  const [eggPrestige, setPrestige] = useState(0);
+  const [eggPrestige, setPrestige] = useState(0);*/
 
-  const audioRef = useRef(null);
-
-  function imgClick() {
-    setIndex((index+1)%n);
-  }
+  //const audioRef = useRef(null);
   //doesn't need dependency because it automatically re-renders when window size changes
-  useEffect(() => {
+  /*useEffect(() => {
     const handleResize = () => {
       setW(window.innerWidth);
       setSpam(0);
@@ -35,9 +32,12 @@ export default function Page() {
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => {window.removeEventListener('resize', handleResize)};
-  }, []);
+  }, []);*/
+  const {index, update} = useIndex(n);
+  const winW = useWindowWidth()
+  const {spamPos, eggPrestige, audioRef} = useSpam(winW)
 
-  useEffect(() => {
+  /*useEffect(() => {
     const handleSpam = (event: KeyboardEvent) => {
       let totalLetters = Math.floor(winW/16)-2;
       if (! event.repeat){
@@ -62,18 +62,18 @@ export default function Page() {
     }
     window.addEventListener('keydown', handleSpam);
     return () => {window.removeEventListener('keydown', handleSpam)};
-  },[spamPos]);
+  },[spamPos]);*/
 
   return (
     <>
       <div className="bg-white text-center pt-10">
         <h1 className="text-5xl pb-10">Evan Miocevich</h1>
-        <p className="pb-8">A Computer Science student passionate about Web Development (Next.js, React, Django), Game Development (Godot) and Software Engineering (Python, C)</p>
+        <p className="pb-8 px-10">A Computer Science student passionate about Web Development (Next.js, React, Django), Game Development (Godot) and Software Engineering (Python, C)</p>
         <p>Click Me</p>
         <p>v</p>
       </div>
       <div className= "flex justify-center items-center">
-        <button onClick={imgClick} className={`m-0 relative`} style={{width:`${winW < 768 ? "100%" : "50%"}`}}>
+        <button onClick={update} className={`m-0 relative`} style={{width:`${winW < 768 ? "100%" : "50%"}`}}>
           <Image 
             src={cycleImages[index]}
             width={imageDims[index][0]} 
@@ -86,7 +86,7 @@ export default function Page() {
       <button className="w-full">
         <div className="bg-white">
           <p className={`relative w-4 h-6 m-0`} style={{left:`${spamPos}rem`}}>{"🥚"}</p>
-          <p>Alternate between Left and Right arrows to move me!</p>
+          <p className="px-10">Alternate between Left and Right arrows to move me!</p>
           <p className="text-[#988933] pb-5">{eggPrestige === 0 ? "" : `Egg Prestige: ${eggPrestige}`}</p>
           <audio ref={audioRef} src={"/tadaCut.mp3"} id={'audio'}></audio>
         </div>

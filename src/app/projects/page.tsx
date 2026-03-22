@@ -1,10 +1,16 @@
-"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import {motion} from "framer-motion"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Evan Miocevich - Projects",
+    description: "My Projects",
+};
 
 export default function Projects() {
-
+   
     const projects = [
         {title: "Card Battle Game (Prototype)",
         description: "A turn-based card game where you can damage other player's hp bar by playing cards in their discard pile. Being made in Godot 4.",

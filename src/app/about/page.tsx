@@ -3,6 +3,7 @@ import { useEffect, useState} from "react";
 import AnimSegment from "../../components/animSegment";
 import DripStone from "../../components/dripStone";
 import FluidBody from "../../components/fluidBody";
+import useWindowWidth from "@/hooks/useWindowWidth";
 
 export default function About(){
 
@@ -34,7 +35,7 @@ export default function About(){
     }
     totalW *= 16
 
-    const [winW, setW] = useState(768);
+    /*const [winW, setW] = useState(768);
 
     useEffect(() => {
         const handleResize = () => {
@@ -43,7 +44,9 @@ export default function About(){
         handleResize();
         window.addEventListener('resize', handleResize);
         return () => {window.removeEventListener('resize', handleResize)};
-      }, []);
+      }, []);*/
+
+      const winW = useWindowWidth();
     
     return (
         <>

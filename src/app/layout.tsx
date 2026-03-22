@@ -4,19 +4,9 @@ import "./globals.css";
 import Navbar from "../components/navbar";
 import AnimBackground from "../components/animBackground";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Evan Miocevich",
-  description: "My website",
+  title: "Evan Miocevich - Home",
+  description: "Home Page",
 };
 
 export default function RootLayout({
