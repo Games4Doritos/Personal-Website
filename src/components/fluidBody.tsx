@@ -1,6 +1,5 @@
 "use client"
-import {motion, useAnimate, stagger, MotionConfig} from "framer-motion"
-import {useState, useEffect} from "react";
+import {motion} from "framer-motion"
 import Image from "next/image";
 
 interface props{
@@ -56,7 +55,7 @@ export default function FluidBody({width}: props){
                 ease:"easeIn",
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: diameter
+                duration: diameter * (0.8 + 0.2 * Math.random())
             }}
         >
         </motion.div>
@@ -93,7 +92,17 @@ export default function FluidBody({width}: props){
                 <div 
                     className="h-96 w-full bg-(--alt) flex justify-evenly m-0 overflow-clip items-center"
                 >
-                    <div className="absolute z-1 aspect-5/3 max-w-1/2 max-h-72">
+                    <motion.div className="absolute z-1 aspect-5/3 max-w-1/2 max-h-72"
+                        animate={{
+                            y:[10,-10,10],
+                        }}
+                        transition = {{
+                            ease:"easeInOut",
+                            repeat:Infinity,
+                            repeatType:"loop",
+                            duration:2
+                        }}
+                    >
                         <Image
                             src="/gameJam.png"
                             width={2254}
@@ -102,7 +111,7 @@ export default function FluidBody({width}: props){
                             className=""
                         >
                         </Image>
-                    </div>
+                    </motion.div>
                     
                     {bubbles.map((diameter, id) =>
                         <div key={id} className="inline-block">

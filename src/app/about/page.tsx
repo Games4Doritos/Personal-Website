@@ -1,5 +1,4 @@
 "use client"
-import { useEffect, useState} from "react";
 import AnimSegment from "../../components/animSegment";
 import DripStone from "../../components/dripStone";
 import FluidBody from "../../components/fluidBody";
@@ -34,19 +33,7 @@ export default function About(){
         totalW += Number(dripStones[i].width.split("rem")[0]) 
     }
     totalW *= 16
-
-    /*const [winW, setW] = useState(768);
-
-    useEffect(() => {
-        const handleResize = () => {
-          setW(window.innerWidth);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => {window.removeEventListener('resize', handleResize)};
-      }, []);*/
-
-      const winW = useWindowWidth();
+    const winW = useWindowWidth();
     
     return (
         <>
@@ -83,9 +70,7 @@ export default function About(){
                     </div>  
                 </div>
             </div>
-            <div className="w-full">
-                <FluidBody width={"100%"}/>
-            </div>
+            <FluidBody width={"100%"}/>
         </>
     );
 }
