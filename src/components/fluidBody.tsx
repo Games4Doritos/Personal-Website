@@ -90,7 +90,8 @@ export default function FluidBody({width}: props){
                             width={598}
                             height={344}
                             alt=""
-                            className="border-2 border-black border-double rounded-xl"
+                            className="rounded-xl"
+                            style={{boxShadow: "0 0 1rem black"}}
                         >
                         </Image>
                     </motion.div>
