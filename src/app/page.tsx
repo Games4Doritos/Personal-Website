@@ -17,9 +17,9 @@ const links = ["https://github.com/games4doritos", "https://www.linkedin.com/in/
 let n: number = cycleImages.length;
 
 const skills: skill[] = [
-  {name:"Front-End Development", descr:"Developing pages, components, and hooks in React and Next.js", icon:"react-plain"},
-  {name:"Back-End Development", descr:"Creating models, views and tests in Django and Flask", icon:"python-plain"},
-  {name:"Game Development", descr:"Building scenes, scripts and assets in Godot", icon:"godot-plain"}
+  {name:"Front-End Development", descr:"Developing pages, components, and hooks in React and Next.js", icon:"react-plain", recent:"#movieCollection"},
+  {name:"Back-End Development", descr:"Creating models, views and tests in Django and Flask", icon:"python-plain", recent:""},
+  {name:"Game Development", descr:"Building scenes, scripts and assets in Godot", icon:"godot-plain", recent:"#gravityBender"}
 ]
 
 export default function Page() {
@@ -82,7 +82,7 @@ export default function Page() {
           >
           </MovingText>
       </div>
-      <div className="bg-white p-5"></div>
+      <div className="bg-white p-10"></div>
     </>
   );
 }

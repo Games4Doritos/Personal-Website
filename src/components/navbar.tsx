@@ -10,10 +10,10 @@ const pages = [
 
 export default function Navbar(){
     return (
-        <div className="flex justify-center z-50" >
+        <div className="flex justify-center z-50">
             {pages.map((item) =>
             <Link href={item.href} key={item.href}>
-                <div className="bg-cyan-600 p-2 text-white">
+                <div className="bg-cyan-600 p-3 text-white" style={{boxShadow:"0 0 1rem "}}>
                     {item.label}
                 </div>
             </Link>
