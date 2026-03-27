@@ -50,13 +50,11 @@ body {
   
 }
 
-.skill {
-}
-
 .skillTooltip {
   visibility: hidden;
 }
 
 .skill:hover .skillTooltip {
   visibility: visible;
+  
 }

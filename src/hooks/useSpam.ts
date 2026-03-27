@@ -7,7 +7,7 @@ const useSpam = (winW: number) => {
     const [spamPos, setSpam] = useState(0);
     const [arrowKey, setArrow] = useState(0);
     const [eggPrestige, setPrestige] = useState(0);
-    const audioRef = useRef(null);
+    const audioRef = useRef<HTMLAudioElement>(null);
 
     useEffect(() => {
         setSpam(0);
@@ -15,11 +15,14 @@ const useSpam = (winW: number) => {
 
     useEffect(() => {
         const handleSpam = (event: KeyboardEvent) => {
+          if (audioRef.current === null){
+            return
+          }
           let totalLetters = Math.floor(winW/16)-2;
           if (! event.repeat){
             if (arrowKey === 0 && event.key === "ArrowLeft"){
               setArrow(1);
-              if (spamPos >= totalLetters-1 && audioRef.current !== null){
+              if (spamPos >= totalLetters-1){
                 audioRef.current.play()
                 setPrestige(eggPrestige+1);
               }
@@ -27,7 +30,7 @@ const useSpam = (winW: number) => {
             }
             if (arrowKey === 1 && event.key === "ArrowRight"){
               setArrow(0);
-              if (spamPos >= totalLetters-1 && audioRef.current !== null){
+              if (spamPos >= totalLetters-1){
                 audioRef.current.play()
                 setPrestige(eggPrestige+1);
               }

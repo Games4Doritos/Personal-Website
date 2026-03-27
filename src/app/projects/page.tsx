@@ -45,11 +45,12 @@ export default function Projects() {
                 <div key={id} id={project.id} className="bg-white rounded-3xl p-5 m-10 animate-border border-2 w-8/10 max-w-5xl mr-auto ml-auto">
                     <h1 className="text-3xl">{project.title}</h1>
                     <p className="my-5">{project.description}</p>
-                    <div className="relative aspect-5/3 mb-10 mt-5 ml-auto mr-auto lg:scale-90 md:scale-100 sm:scale-100">
+                    <div className="relative aspect-5/3 mb-10 mt-5 mx-auto scale-90">
                         <Image
                         src={project.thumbnail}
                         alt="/next.svg"
                         fill
+                        sizes="max-width: 71.1rem"
                         />
                     </div>
                     <Link href={project.link === "" ? "/projects" : project.link}>

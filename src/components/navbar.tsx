@@ -13,7 +13,7 @@ export default function Navbar(){
         <div className="flex justify-center z-50">
             {pages.map((item) =>
             <Link href={item.href} key={item.href}>
-                <div className="bg-cyan-600 p-3 text-white" style={{boxShadow:"0 0 1rem "}}>
+                <div className="bg-cyan-600 p-3 text-white" style={{boxShadow:"0 0 0.5rem "}}>
                     {item.label}
                 </div>
             </Link>

@@ -3,14 +3,30 @@ import AnimSegment from "../../components/animSegment";
 import DripStone from "../../components/dripStone";
 import FluidBody from "../../components/fluidBody";
 import useWindowWidth from "@/hooks/useWindowWidth";
+import { ReactElement } from "react";
+import Link from "next/link";
 
 export default function About(){
 
-    const points: string[] =[
-        `University Student studying a Bachelor of Advanced Computer Science (Honours) 
-        at The University of Western Australia, majoring in Artificial Intelligence`,
-        `Ordinary Committee Member (Projects) for Game Development UWA`,
-        `Very interested in making games, websites, and software!`
+    const points: ReactElement[] =[
+        <>
+            University Student studying a Bachelor of Advanced Computer Science (Honours) 
+            at <b>The University of Western Australia</b>, majoring in Artificial Intelligence 
+        </>,
+        <>
+            President of 
+            <Link href="https://codersforcauses.org/" className="mx-1">
+                <b><u>Coders for Causes</u></b>
+            </Link> 
+            and Ordinary Committee Member 
+            (Projects) for 
+            <Link href="https://www.linkedin.com/company/game-development-uwa/?viewAsMember=true" className="mx-1">
+                <b><u>Game Development UWA</u></b>
+            </Link>
+        </>,
+        <>
+            Very interested in making games, websites, and software!
+        </>
     ];
 
     type dripstone = {
@@ -43,7 +59,7 @@ export default function About(){
             <div className="mx-10">
                 <div className="relative max-w-7xl mx-auto">
                     <p className="bg-white w-36 mx-auto h-20 relative flex"></p>
-                    {points.slice(0,points.length-1).map((point:string, id) =>
+                    {points.slice(0,points.length-1).map((point, id) =>
                         (<div key={id}>
                             <p className="bg-white text-center p-7 w-full">
                                 {point}
