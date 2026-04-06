@@ -8,9 +8,7 @@ export const metadata: Metadata = {
     description: "My Projects",
 };
 
-export default function Projects() {
-   
-    const projects = [
+export const projects = [
         {title: "Gravity Bender",
         description: "A 3D platform shooter developed in the second UWA Game Jam. Programmed by Me and Joshua Noble (PatronSaintOfEpicGamers), with the music created by transient luminous events",
         thumbnail: "/gravityBender.png",
@@ -36,16 +34,24 @@ export default function Projects() {
         id: "survivalGame"
         },
     ];
+
+export default function Projects() {
+   
+    
     return (
         <>
-            <div className="bg-white text-center p-10">
-                <h1 className="text-5xl">Evan's <del>Silly</del>Great Projects!</h1>
+            <div className="bg-white text-center p-10 text-5xl">
+                My Projects!
             </div>
+            <div className="flex flex-wrap justify-center p-5">
             {projects.map((project, id) => (
-                <div key={id} id={project.id} className="bg-white rounded-3xl p-5 m-10 animate-border border-2 w-8/10 max-w-5xl mr-auto ml-auto">
-                    <h1 className="text-3xl">{project.title}</h1>
-                    <p className="my-5">{project.description}</p>
-                    <div className="relative aspect-5/3 mb-10 mt-5 mx-auto scale-90">
+                <Link
+                    href={`/projects/${project.id}`}
+                    key = {id}
+                    className="bg-white rounded-3xl p-5 m-5 animate-border border w-xl "
+                >
+                    <h1 className="text-3xl text-center">{project.title}</h1>
+                    <div className="relative aspect-5/3 scale-90">
                         <Image
                         src={project.thumbnail}
                         alt="/next.svg"
@@ -53,12 +59,10 @@ export default function Projects() {
                         sizes="max-width: 71.1rem"
                         />
                     </div>
-                    <Link href={project.link === "" ? "/projects" : project.link}>
-                        <h1 className="text-3xl bg-cyan-600 rounded-2xl w-fit px-4 text-white shadow-2xl" style={{boxShadow: "0 0 1rem black"}}>{project.link === "" ? "" : "Check it out here"}</h1>
-                    </Link>
-                </div>
+                </Link>
             )
             )}
+            </div>
         </>
     );
 }

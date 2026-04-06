@@ -13,13 +13,14 @@ export default function DripStone({dropDuration, width}:props){
         <div className={`relative`}
             style={{width: width}}
         >
-            <p 
+            <div 
             className="bg-white aspect-3/4"
             style={{
                 clipPath:"polygon(0% 0%, 100% 0%, 50% 100%)",
+
             }}
             >
-            </p>
+            </div>
             <div className="flex justify-center">
                 <Raindrop dropDuration={dropDuration}/>
             </div>

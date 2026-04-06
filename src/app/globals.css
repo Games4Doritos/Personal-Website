@@ -14,22 +14,28 @@
 
   @keyframes border {
     0% {
-      border-color: blue
+      box-shadow: 0 0 1rem blue;
+      border-color:blue;
     }
     20% {
-      border-color: green
+      box-shadow: 0 0 1rem green;
+      border-color:green;
     }
     40% {
-      border-color: yellow
+      box-shadow: 0 0 1rem yellow;
+      border-color:yellow;
     }
     60% {
-      border-color: red
+      box-shadow: 0 0 1rem red;
+      border-color:red;
     }
     80% {
-      border-color: purple
+      box-shadow: 0 0 1rem purple;
+      border-color:purple;
     }
     100% {
-      border-color: blue;
+      box-shadow: 0 0 1rem blue;
+      border-color:blue;
     }
   }
 

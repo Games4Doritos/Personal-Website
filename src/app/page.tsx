@@ -17,9 +17,9 @@ const links = ["https://github.com/games4doritos", "https://www.linkedin.com/in/
 let n: number = cycleImages.length;
 
 const skills: skill[] = [
-  {name:"Front-End Development", descr:"Developing responsive pages and UI in React and Next.js", icon:"react-plain", recent:"#movieCollection"},
+  {name:"Front-End Development", descr:"Developing responsive pages and UI in React and Next.js", icon:"react-plain", recent:"movieCollection"},
   {name:"Back-End Development", descr:"Creating applications and using APIs in Django and Flask", icon:"python-plain", recent:""},
-  {name:"Game Development", descr:"Building games from scenes, scripts and assets in Godot", icon:"godot-plain", recent:"#gravityBender"}
+  {name:"Game Development", descr:"Building games from scenes, scripts and assets in Godot", icon:"godot-plain", recent:"gravityBender"}
 ]
 
 export default function Page() {

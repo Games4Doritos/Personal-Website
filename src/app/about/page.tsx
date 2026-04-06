@@ -15,12 +15,12 @@ export default function About(){
         </>,
         <>
             President of 
-            <Link href="https://codersforcauses.org/" className="mx-1">
+            <Link href="https://codersforcauses.org/" target="_blank" className="mx-1">
                 <b><u>Coders for Causes</u></b>
             </Link> 
             and Ordinary Committee Member 
             (Projects) for 
-            <Link href="https://www.linkedin.com/company/game-development-uwa/?viewAsMember=true" className="mx-1">
+            <Link href="https://www.linkedin.com/company/game-development-uwa/?viewAsMember=true" target="_blank" className="mx-1">
                 <b><u>Game Development UWA</u></b>
             </Link>
         </>,
@@ -53,9 +53,7 @@ export default function About(){
     
     return (
         <>
-            <div className="bg-white text-center p-10 w-full">
-                <h1 className="text-5xl">Who am I?</h1>
-            </div>
+            <div className="bg-white text-center p-10 text-5xl">Who am I?</div>
             <div className="mx-10">
                 <div className="relative max-w-7xl mx-auto">
                     <p className="bg-white w-36 mx-auto h-20 relative flex"></p>
