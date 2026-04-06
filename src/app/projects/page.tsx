@@ -40,8 +40,22 @@ export default function Projects() {
     
     return (
         <>
-            <div className="bg-white text-center p-10 text-5xl">
-                My Projects!
+            <div className="bg-white text-center p-10">
+                <h1 className="text-5xl">
+                    My Projects!
+                </h1>
+                <p
+                    className="pt-10 pb-5"
+                >
+                    Check out my &#32;
+                    <Link
+                        href= "https://github.com/Games4Doritos"
+                        target="_blank"
+                    >
+                        <b><u>Github</u></b>
+                    </Link>
+                    &#32; for all my projects, things I've worked on, and coursework!
+                </p>
             </div>
             <div className="flex flex-wrap justify-center p-5">
             {projects.map((project, id) => (

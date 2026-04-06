@@ -33,27 +33,27 @@ export default async function Page({ params }:props) {
             <div className="bg-white text-center p-10 w-full text-5xl">
                 {project.title}
             </div>
-        <div className="w-24 h-32 bg-white relative mx-auto shadow-[0_0_1rem_black] -z-1"></div>
-        <div className="flex justify-center mb-16">
-            {sidebar}
-            <div 
-                className="bg-white rounded-3xl p-5 w-8/10 max-w-5xl shadow-[0_0_1rem_black]"
-            >
-                <p className="my-5">{project.description}</p>
-                <div className="relative aspect-5/3 mb-10 mt-5 mx-auto scale-90">
-                    <Image
-                    src={project.thumbnail}
-                    alt="/next.svg"
-                    fill
-                    sizes="max-width: 71.1rem"
-                    />
+            <div className="w-24 h-32 bg-white relative mx-auto shadow-[0_0_1rem_black] -z-1"></div>
+            <div className="flex justify-center mb-16">
+                {sidebar}
+                <div 
+                    className="bg-white rounded-3xl p-5 w-8/10 max-w-5xl shadow-[0_0_1rem_black]"
+                >
+                    <p className="my-5">{project.description}</p>
+                    <div className="relative aspect-5/3 mb-10 mt-5 mx-auto scale-90">
+                        <Image
+                        src={project.thumbnail}
+                        alt="/next.svg"
+                        fill
+                        sizes="max-width: 71.1rem"
+                        />
+                    </div>
+                    <Link href={project.link === "" ? "/projects" : project.link}>
+                        <h1 className="text-3xl bg-cyan-600 rounded-2xl w-fit px-4 text-white shadow-[0_0_1rem_black]">{project.link === "" ? "" : "Check it out here"}</h1>
+                    </Link>
                 </div>
-                <Link href={project.link === "" ? "/projects" : project.link}>
-                    <h1 className="text-3xl bg-cyan-600 rounded-2xl w-fit px-4 text-white shadow-[0_0_1rem_black]">{project.link === "" ? "" : "Check it out here"}</h1>
-                </Link>
+                {sidebar}
             </div>
-            {sidebar}
-        </div>
         </>
     );
 }
