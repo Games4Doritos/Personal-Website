@@ -19,7 +19,7 @@ export default function SkillCard({skill}:props){
         <div className="skill rounded-xl m-3 p-5 w-72 shadow-[0_0_1rem_grey]"
             
         >
-            <h3 className="text-xl text-center">
+            <h3 className="text-xl text-center p-1">
                 {skill.name}
             </h3>
             <p className="">

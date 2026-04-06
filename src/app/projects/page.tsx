@@ -64,7 +64,7 @@ export default function Projects() {
                     key = {id}
                     className="bg-white rounded-3xl p-5 m-5 animate-border border w-xl "
                 >
-                    <h1 className="text-3xl text-center">{project.title}</h1>
+                    <h1 className="sm:text-3xl text-center">{project.title}</h1>
                     <div className="relative aspect-5/3 scale-90">
                         <Image
                         src={project.thumbnail}
