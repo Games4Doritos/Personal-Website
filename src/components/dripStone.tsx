@@ -10,14 +10,13 @@ interface props{
 
 export default function DripStone({dropDuration, width}:props){
     return (
-        <div className={`relative`}
+        <div className="relative"
             style={{width: width}}
         >
             <div 
-            className="bg-white aspect-3/4"
+            className="bg-white aspect-3/4 "
             style={{
                 clipPath:"polygon(0% 0%, 100% 0%, 50% 100%)",
-
             }}
             >
             </div>

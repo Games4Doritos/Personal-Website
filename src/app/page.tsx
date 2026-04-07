@@ -49,7 +49,7 @@ export default function Page() {
       </div>
       <div className="w-full bg-white">
         <h3 className=" text-center text-4xl pt-10">
-          Main Skills
+          My Skills
         </h3>
         <div className="flex justify-center p-5 flex-wrap">
           {skills.map((skill, id) => (

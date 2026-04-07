@@ -28,7 +28,8 @@ export default async function Page({ params }:props) {
         return (
             <>
                 <div className="text-white text-4xl text-center my-15 p-5 w-fit mx-auto shadow-[0_0_1rem_black] rounded-2xl">
-                    <b>Oh No!  A project with that ID doesn't exist!</b>
+                    <b>Oh No! A project with that ID doesn't exist!</b> 
+                    <p className="pt-5"><b>404</b></p>
                 </div>
                 <Link
                     href="/projects"  
@@ -39,7 +40,6 @@ export default async function Page({ params }:props) {
                 </Link>
             </>
         );
-
     }
 
     return (
@@ -48,11 +48,11 @@ export default async function Page({ params }:props) {
                 {project.title}
             </div>
             <div className="flex w-full">
-                <div className="text-white text-5xl py-10 pl-5 sm:pl-10 w-1/10">
+                <div className="text-white text-5xl py-10 pl-5 sm:pl-10 w-1/10 ">
                     <Link
                     href="/projects"
                     >
-                        <b className="hover:text-shadow-[0_0_1rem_black]">&larr;</b>
+                        <p className="hover:text-shadow-[0_0_1rem_black]">&lArr;</p>
                     </Link>
                 </div>
                 <div className="w-24 h-32 bg-white relative shadow-[0_0_1rem_black] -z-1 ml-[calc(40%-3rem)]"></div>
@@ -75,7 +75,7 @@ export default async function Page({ params }:props) {
                         href={project.link === "" ? "/projects" : project.link}
                         target="_blank"
                     >
-                        <h1 className="text-3xl bg-cyan-600 rounded-2xl w-fit px-4 text-white shadow-[0_0_1rem_black]">
+                        <h1 className="text-3xl bg-cyan-600 rounded-2xl w-fit px-4 text-white shadow-[0_0_1rem_black] hover:scale-105">
                             {project.link === "" ? "" : "Check it out here!"}
                         </h1>
                     </Link>

@@ -53,12 +53,12 @@ export default function About(){
     
     return (
         <>
-            <div className="bg-white text-center p-10 text-5xl">Who am I?</div>
+            <div className="bg-white text-center p-10 text-5xl ">Who am I?</div>
             <div className="mx-10">
                 <div className="relative max-w-7xl mx-auto">
-                    <p className="bg-white w-36 mx-auto h-20 relative flex"></p>
+                    <p className="bg-white w-36 mx-auto h-20 relative flex shadow-[0_0_1rem_black] -z-1"></p>
                     {points.slice(0,points.length-1).map((point, id) =>
-                        (<div key={id}>
+                        (<div key={id} className="shadow-[0_0_1rem_black]">
                             <p className="bg-white text-center p-7 w-full">
                                 {point}
                             </p>
@@ -70,7 +70,7 @@ export default function About(){
                         </div>
                         )
                     )}
-                    <p className="bg-white text-center p-7 w-full" >
+                    <p className="bg-white text-center p-7 w-full shadow-[0_0_1rem_black]" >
                         {points.at(-1)}
                     </p>
                     <div className="flex justify-evenly">
