@@ -62,7 +62,7 @@ export default async function Page({ params }:props) {
                 <div 
                     className="bg-white rounded-3xl p-5 w-8/10 max-w-5xl shadow-[0_0_1rem_black]"
                 >
-                    <p className="my-5">{project.description}</p>
+                    <p className="p-5">{project.description}</p>
                     <div className="relative aspect-5/3 mb-10 mt-5 mx-auto scale-90">
                         <Image
                         src={project.thumbnail}

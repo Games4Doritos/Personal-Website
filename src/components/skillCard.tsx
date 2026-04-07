@@ -16,7 +16,7 @@ export default function SkillCard({skill}:props){
     
 
     return (
-        <div className="skill rounded-xl m-3 p-5 w-72 shadow-[0_0_1rem_grey]"
+        <div className="skill rounded-xl m-3 p-5 w-72 shadow-[0_0_1rem_grey] hover:scale-105"
             
         >
             <h3 className="text-xl text-center p-1">

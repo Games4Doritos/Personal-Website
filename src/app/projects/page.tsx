@@ -62,7 +62,7 @@ export default function Projects() {
                 <Link
                     href={`/projects/${project.id}`}
                     key = {id}
-                    className="bg-white rounded-3xl p-5 m-5 animate-border border w-xl "
+                    className="bg-white rounded-3xl p-5 m-5 animate-border border w-xl hover:scale-105"
                 >
                     <h1 className="sm:text-3xl text-center">{project.title}</h1>
                     <div className="relative aspect-5/3 scale-90">
@@ -77,6 +77,7 @@ export default function Projects() {
             )
             )}
             </div>
+            <div className="bg-white p-10"></div>
         </>
     );
 }
