@@ -37,7 +37,7 @@ export default function Page() {
         <p>v</p>
       </div>
       <div className= "flex justify-center items-center">
-        <button onClick={update} className="m-0 relative max-w-156 w-full">
+        <button onClick={update} className="m-0 relative max-w-156 w-full shadow-[0_0_1rem_black] ">
           <Image 
             src={cycleImages[index]}
             width={imageDims[index][0]} 
@@ -68,7 +68,7 @@ export default function Page() {
       </div>
       <div className="flex justify-center items-center p-8 flex-wrap">
         {links.map((link, id) =>
-          (<SocialIcon url={link} key={id} target="_blank" className="p-10 m-4 hover:scale-105"/>)
+          (<SocialIcon url={link} key={id} target="_blank" className="p-10 m-4 hover:scale-105 shadow-[0_0_1rem_gray] rounded-[50%]"/>)
         )}
       </div>
       <div className="text-xl text-white flex justify-center">

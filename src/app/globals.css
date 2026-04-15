@@ -4,13 +4,36 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+/*
+@property --x{
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+  }
 
+@property --y{
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+  }
+*/
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --animate-border: border 2s infinite;
+  --animate-propagate: propagation 0.5s infinite ease-in-out;
+
+  @keyframes propagation {
+    50%{
+      transform: translateY(2.875rem);
+      
+    }
+    100%{
+      transform: translateY(2rem);
+    }
+  }
 
   @keyframes border {
     0% {

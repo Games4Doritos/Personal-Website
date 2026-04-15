@@ -71,7 +71,7 @@ export default function FluidBody({width}: props){
                     )}
                 </div>
                 <div 
-                    className="h-120 w-full bg-(--alt) flex justify-evenly m-0 overflow-clip items-center"
+                    className="h-150 w-full bg-(--alt) flex justify-evenly m-0 overflow-clip items-center"
                 >
                     <motion.div className="absolute z-1 max-w-1/2 max-h-72"
                         //max height of image will be 3/5 * h
