@@ -20,7 +20,7 @@ export default async function Page({ params }:props) {
         return (
             <>
                 <div className="text-white text-4xl text-center my-15 p-5 w-fit mx-auto shadow-[0_0_1rem_black] rounded-2xl">
-                    <b>Oh No! A project with that ID doesn't exist!</b> 
+                    <b>Oh No! A project with that ID doesn&apos;t exist!</b> 
                     <p className="pt-5"><b>404</b></p>
                 </div>
                 <Link

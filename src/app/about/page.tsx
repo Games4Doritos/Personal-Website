@@ -37,7 +37,7 @@ const points: ReactElement[] = [
         University Student studying a Bachelor of Advanced Computer Science (Honours) 
         at <b>The University of Western Australia</b>, majoring in Artificial Intelligence
         <div className="pt-5">
-            I'm very interested in making games, web applications, and software!
+            I&apos;m very interested in making games, web applications, and software!
         </div>
     </>,
     <>

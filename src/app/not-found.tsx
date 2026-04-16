@@ -4,7 +4,7 @@ export default function notFound(){
     return (
         <>
             <div className="text-white text-4xl text-center my-15 p-5 w-fit mx-auto shadow-[0_0_1rem_black] rounded-2xl">
-                <b>Oh No! The page couldn't be found!</b> 
+                <b>Oh No! The page couldn&apos;t be found!</b> 
                 <p className="pt-5"><b>404</b></p>
             </div>
             <Link

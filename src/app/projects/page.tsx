@@ -54,7 +54,7 @@ export default function Projects() {
                     >
                         <b><u>Github</u></b>
                     </Link>
-                    &#32; for all my projects, things I've worked on, and coursework!
+                    &#32; for all my projects, things I&apos;ve worked on, and coursework!
                 </p>
             </div>
             <div className="flex flex-wrap justify-center p-5">
