@@ -49,24 +49,26 @@ export default async function Page({ params }:props) {
                 </div>
             </div>
             <div
-                className="h-24 bg-white relative shadow-[0_0_1rem_black] -z-1 mx-auto"
+                className="h-24 bg-white relative shadow-[0_0_1rem_gray] -z-1 mx-auto"
                 style={{
                     transform: "rotate(90deg)",
                     width: "calc(max((100% - 64rem)/2, 10%))",
                     marginTop: "calc((max((100% - 64rem)/2, 10%) - 6rem)/2)",
                     marginBottom: "calc((max((100% - 64rem)/2, 10%) - 6rem)/2)"
-                }}
-            >
+                }}            
+                >
                 <FlowingEnergy colour="crimson"/>
+
             </div>
             <div className="flex justify-center mb-16">
                 <div 
-                    className="inline-block relative h-24 my-auto shadow-[0_0_1rem_black] -z-1 bg-white" 
+                    className="inline-block relative h-24 my-auto shadow-[0_0_1rem_gray] -z-1 bg-white" 
                     style={{
                         width:"calc(max((100% - 64rem)/2, 10%))",
                     }}
                 >
                     <FlowingEnergy colour="lime"/>
+
                 </div>
                 <div 
                     className="bg-white rounded-3xl p-5 w-8/10 max-w-5xl border animate-border"
@@ -92,13 +94,12 @@ export default async function Page({ params }:props) {
                     </Link>
                 </div>
                 <div 
-                    className="inline-block relative h-24 my-auto shadow-[0_0_1rem_black] -z-1 bg-white" 
+                    className="inline-block relative h-24 my-auto shadow-[0_0_1rem_gray] -z-1 bg-white" 
                     style={{
                         width:"calc(max((100% - 64rem)/2, 10%))",
                     }}
                 >
                     <FlowingEnergy colour="cornflowerblue"/>
-
                 </div>
             </div>
             

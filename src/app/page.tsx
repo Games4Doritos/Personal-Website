@@ -32,7 +32,6 @@ export default function Page() {
       <div className="bg-white text-center pt-10">
         <h1 className="text-5xl pb-10">Evan Miocevich</h1>
         <p className="pb-8 px-10">Computer Science Student and aspiring Full Stack Developer</p>
-        
         <p>Click Me</p>
         <p>v</p>
       </div>
