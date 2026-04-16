@@ -1,6 +1,4 @@
 "use client"
-import {motion} from "framer-motion";
-import {useState, useEffect, useRef} from "react";
 import Raindrop from "./raindrop";
 
 interface props{
@@ -10,14 +8,14 @@ interface props{
 
 export default function DripStone({dropDuration, width}:props){
     return (
-        <div className="relative"
+        <div className="relative -z-1"
             style={{width: width}}
         >
             <div 
-            className="bg-white aspect-3/4 "
-            style={{
-                clipPath:"polygon(0% 0%, 100% 0%, 50% 100%)",
-            }}
+                className="bg-white aspect-3/4"
+                style={{
+                    clipPath:"polygon(0% 0%, 100% 0%, 50% 100%)",
+                }}
             >
             </div>
             <div className="flex justify-center">

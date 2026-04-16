@@ -26,21 +26,17 @@ export default function SkillCard({skill}:props){
                 {skill.descr}
             </p>
             <p className="mt-5 m-3 text-center">
-                <i className={`devicon-${skill.icon} text-5xl text-(--alt)`}/>
+                <i className={`devicon-${skill.icon} text-5xl text-alt`}/>
             </p>
             {skill.recent == "" ? (
                 <></>
                 ) : 
-                <Link 
-                    className="skillTooltip"
-                    href={`/projects/${skill.recent}`}
-                >
-                    <p 
-                        className="rounded-xl border border-black w-fit p-1 hover:text-shadow-[0_0_1rem_black]"
+                    <Link 
+                        className="rounded-xl border p-2 border-black hover:text-shadow-[0_0_1rem_black] skillTooltip"
+                        href={`/projects/${skill.recent}`}
                     >
                         Recent Project
-                    </p>
-                </Link>
+                    </Link>
                 }
         </div>
 

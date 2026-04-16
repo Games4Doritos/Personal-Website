@@ -1,6 +1,5 @@
 import Link from "next/link"
 
-
 const pages = [
     {href:"/", label:'Home'},
     {href:"/projects", label:'Projects'},

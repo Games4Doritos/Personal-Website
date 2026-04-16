@@ -1,8 +1,10 @@
 "use client"
+
 import {motion} from "framer-motion"
 import Image from "next/image";
 import useWindowWidth from "../hooks/useWindowWidth";
-import { useMemo } from "react";
+import { useRef } from "react";
+import Link from "next/link";
 
 interface props{
     width: string;
@@ -41,6 +43,7 @@ for (let i =0; i < bubbles.length; i++){
 
 export default function FluidBody({width}: props){
 
+    const audioRef = useRef<HTMLAudioElement>(null);
     const winW = useWindowWidth();
     const waveSegments = winW < 768 ? 2: 3
     const pulseStart = 10;
@@ -65,8 +68,14 @@ export default function FluidBody({width}: props){
             )}
         </>
         )
-    
 
+    const jumpscarePlay = () => {
+        if (audioRef.current != null) {
+            audioRef.current.volume = 0.4;
+            audioRef.current.play()
+        }
+    }
+    
     return (
         <>
             <div style={{width:width}} className="m-0">
@@ -93,15 +102,18 @@ export default function FluidBody({width}: props){
                             duration:2
                         }}
                     >
-                        <Image
-                            src="/me.jpg"
-                            width={598}
-                            height={344}
-                            alt=""
-                            className="rounded-xl"
-                            style={{boxShadow: "0 0 1rem black"}}
-                        >
-                        </Image>
+                        <button onClick={jumpscarePlay}>
+                            <Image
+                                src="/me.jpg"
+                                width={598}
+                                height={344}
+                                alt=""
+                                className="rounded-xl shadow-[0_0_1rem_white]"
+                                loading="eager"
+                            >
+                            </Image>
+                        </button>
+                        <audio ref={audioRef} src="/fnaf2Jumpscare.mp3"></audio>
                     </motion.div>
                     
                     {bubbles.map((diameter, id) =>

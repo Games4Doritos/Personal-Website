@@ -10,24 +10,28 @@ const experiences = [
     {
         title: "President of",
         link: "https://codersforcauses.org/",
-        org: "Coders for Causes"
+        org: "Coders for Causes",
+        date: "(2026 - Present)"
 
     },
     {
         title: "Local Government Child Safeguarding Project - E-Learning and Online Resources Intern at",
         link: "https://www.wa.gov.au/organisation/department-of-local-government-industry-regulation-and-safety",
-        org: "LGIRS"
-    },
-    {
-        title: "Summer Client Project Volunteer (Fullstack Developer) for",
-        link: "https://codersforcauses.org/",
-        org: "Coders for Causes"
+        org: "LGIRS",
+        date: "(2026 - Present)"
     },
     {
         title: "Ordinary Committee Member (Projects) for",
         link: "https://www.linkedin.com/company/game-development-uwa/",
-        org: "Game Development UWA"
-    }
+        org: "Game Development UWA",
+        date:"(2025 - Present)"
+    },
+    {
+        title: "Summer Client Project Volunteer (Fullstack Developer) for",
+        link: "https://codersforcauses.org/",
+        org: "Coders for Causes",
+        date: "(2025 - 2026)"
+    },
 
 
 ];
@@ -41,18 +45,20 @@ const points: ReactElement[] = [
         </div>
     </>,
     <>
-        <h3 className="text-3xl pb-5 ">Experience</h3>
+        <div className="px-[calc(10%-1.25rem)]">
         {experiences.map((experience, id) => (
-            <div className="text-left pb-2" key={id}>
-                <p className="p-2 rounded-[50%] bg-alt w-fit absolute mt-1"></p>
-                <p className="pl-8">
+            <div className="text-left pb-5" key={id}>
+                <p className="text-alt text-2xl absolute leading-none"><b>&#129070;</b></p>
+                <div className="pl-8">
                     {experience.title} 
                     <Link href={experience.link} target="_blank" className="mx-1">
                         <b><u>{experience.org}</u></b>
                     </Link> 
-                </p>
+                    <p className="relative inline-block">{experience.date}</p>
+                </div>
             </div>
         ))}
+        </div>
     </>,
     <>
         For my full history and more details, check out my 
@@ -96,7 +102,7 @@ export default function About(){
                     <p className="bg-white w-36 mx-auto h-20 relative flex shadow-[0_0_1rem_black] -z-1"></p>
                     {points.slice(0,points.length-1).map((point, id) =>
                         (<div key={id} className="shadow-[0_0_1rem_black]">
-                            <div className="bg-white text-center py-7 px-[10%] w-full">
+                            <div className="bg-white text-center p-7 w-full">
                                 {point}
                             </div>
                             <div className="flex justify-center">

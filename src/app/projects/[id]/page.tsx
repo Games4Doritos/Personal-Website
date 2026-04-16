@@ -86,12 +86,10 @@ export default async function Page({ params }:props) {
                     <Link 
                         href={project.link}
                         target="_blank"
-                        className={project.link === "" ? "hidden" : ""}
+                        className={`p-3 mb-5 text-2xl rounded-3xl w-fit shadow-[0_0_1rem_black] hover:scale-105 block ${project.link === "" ? "hidden" : ""}`}
                     >
-                        <h1 className="text-2xl p-2 rounded-3xl w-fit shadow-[0_0_1rem_black] hover:scale-105">
-                            Check it out here!
-                        </h1>
-                    </Link>
+                        Check it out here!
+                    </Link>  
                 </div>
                 <div 
                     className="inline-block relative h-24 my-auto shadow-[0_0_1rem_gray] -z-1 bg-white" 
