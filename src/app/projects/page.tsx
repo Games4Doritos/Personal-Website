@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Metadata } from "next"
+import { prefix } from "../layout";
 
 export const metadata: Metadata = {
     title: "Evan Miocevich - Projects",
@@ -67,7 +68,7 @@ export default function Projects() {
                     <h1 className="sm:text-3xl text-center">{project.title}</h1>
                     <div className="relative aspect-5/3 scale-90">
                         <Image
-                        src={project.thumbnail}
+                        src={`${prefix}/${project.thumbnail}`}
                         alt="/next.svg"
                         fill
                         sizes="max-width: 71.1rem"

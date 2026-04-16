@@ -4,7 +4,7 @@ import {motion} from "framer-motion"
 import Image from "next/image";
 import useWindowWidth from "../hooks/useWindowWidth";
 import { useRef } from "react";
-import Link from "next/link";
+import { prefix } from "@/app/layout";
 
 interface props{
     width: string;
@@ -104,7 +104,7 @@ export default function FluidBody({width}: props){
                     >
                         <button onClick={jumpscarePlay}>
                             <Image
-                                src="/me.jpg"
+                                src={`${prefix}/me.jpg`}
                                 width={598}
                                 height={344}
                                 alt=""
@@ -113,7 +113,7 @@ export default function FluidBody({width}: props){
                             >
                             </Image>
                         </button>
-                        <audio ref={audioRef} src="/fnaf2Jumpscare.mp3"></audio>
+                        <audio ref={audioRef} src={`${prefix}/fnaf2Jumpscare.mp3`}></audio>
                     </motion.div>
                     
                     {bubbles.map((diameter, id) =>
@@ -121,9 +121,7 @@ export default function FluidBody({width}: props){
                             {bubble(diameter, durations[id])}
                         </div>
                     )}
-
                 </div>
-
             </div>
         </>
 

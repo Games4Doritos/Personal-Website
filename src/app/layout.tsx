@@ -9,11 +9,15 @@ export const metadata: Metadata = {
   description: "Home Page",
 };
 
+export const prefix = process.env.NODE_ENV === 'production' ? '/personal-website' : '';
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <body>

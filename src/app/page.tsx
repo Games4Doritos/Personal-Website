@@ -7,6 +7,7 @@ import useWindowWidth from "../hooks/useWindowWidth";
 import useSpam from "../hooks/useSpam";
 import useIndex from "../hooks/useIndex";
 import SkillCard, {skill} from "../components/skillCard";
+import { prefix } from "./layout";
 
 const cycleImages: string[] = ["/gameJam.png" ,"/reactScreenshot.png", "/leetShot.png", "/nextShot.png" , "/djangoShot.png" , "/cShot.png"];
 const imageDims: [number,number][] = [[2254,1419], [2182,1378], [1324,784], [2250,1428], [2254,1422], [2254,1293]]
@@ -38,7 +39,7 @@ export default function Page() {
       <div className= "flex justify-center items-center">
         <button onClick={update} className="m-0 relative max-w-156 w-full shadow-[0_0_1rem_black] ">
           <Image 
-            src={cycleImages[index]}
+            src={`${prefix}/${cycleImages[index]}`}
             width={imageDims[index][0]} 
             height={imageDims[index][1]} 
             alt="/next.svg"
@@ -61,7 +62,7 @@ export default function Page() {
           <div className="text-center">
             <p className="px-10">Alternate between Left and Right arrows to move me!</p>
             <p className="text-[#988933] pb-5">{eggPrestige === 0 ? "" : `Egg Prestige: ${eggPrestige}`}</p>
-            <audio ref={audioRef} src={"/tadaCut.mp3"} id={'audio'}></audio>
+            <audio ref={audioRef} src={`${prefix}/tadaCut.mp3`}></audio>
           </div>
         </div>
       </div>
