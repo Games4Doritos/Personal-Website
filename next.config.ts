@@ -1,8 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  allowedDevOrigins: ["192.168.56.1", "192.168.0.41"],
+  output: "export",
+  basePath: "/personal-website",
+  images: {
+    unoptimized: true,
+  },
+
 };
 
 export default nextConfig;
