@@ -4,7 +4,8 @@ import {motion} from "framer-motion"
 import Image from "next/image";
 import useWindowWidth from "../hooks/useWindowWidth";
 import { useRef } from "react";
-import { prefix } from "@/app/layout";
+
+const prefix = process.env.NODE_ENV === 'production' ? '/personal-website' : '';
 
 interface props{
     width: string;

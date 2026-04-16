@@ -2,12 +2,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Metadata } from "next"
-import { prefix } from "../layout";
 
-export const metadata: Metadata = {
-    title: "Evan Miocevich - Projects",
-    description: "My Projects",
-};
+const prefix = process.env.NODE_ENV === 'production' ? '/personal-website' : '';
 
 export const projects = [
         {title: "Gravity Bender",
