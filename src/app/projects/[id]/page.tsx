@@ -41,7 +41,10 @@ export default async function Page({ params }:props) {
                     <Link
                     href="/projects"
                     >
-                        <p className="hover:text-shadow-[0_0_1rem_black] text-xl text-zinc-700 p-4">&larr; Return to All Projects</p>
+                        <div className="hover:text-shadow-[0_0_1rem_black] text-xl text-zinc-700 p-4">
+                            <p className="mr-1 bottom-0.5 relative inline-block " > &larr;</p>
+                            Return to All Projects
+                        </div>
                     </Link>
                 </div>
                 <div className="w-full text-5xl">

@@ -48,7 +48,7 @@ const points: ReactElement[] = [
         <div className="px-[calc(10%-1.25rem)]">
         {experiences.map((experience, id) => (
             <div className="text-left pb-5" key={id}>
-                <p className="text-alt text-2xl absolute leading-none"><b>&#129070;</b></p>
+                <p className="text-alt text-2xl absolute leading-5 "><b>&rarr;</b></p>
                 <div className="pl-8">
                     {experience.title} 
                     <Link href={experience.link} target="_blank" className="mx-1">
