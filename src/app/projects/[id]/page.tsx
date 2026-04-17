@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../page";
 import FlowingEnergy from "../../../components/flowingEnergy";
-
-const prefix = process.env.NODE_ENV === 'production' ? '/personal-website' : '';
+import { prefix } from "@/app/layout";
 
 interface props {
     params: Promise<{id:string}>;

@@ -7,8 +7,7 @@ import useWindowWidth from "../hooks/useWindowWidth";
 import useSpam from "../hooks/useSpam";
 import useIndex from "../hooks/useIndex";
 import SkillCard, {skill} from "../components/skillCard";
-
-const prefix = process.env.NODE_ENV === 'production' ? '/personal-website' : '';
+import { prefix } from "./layout";
 
 const cycleImages: string[] = ["/gameJam.png" ,"/reactScreenshot.png", "/leetShot.png", "/nextShot.png" , "/djangoShot.png" , "/cShot.png"];
 const imageDims: [number,number][] = [[2254,1419], [2182,1378], [1324,784], [2250,1428], [2254,1422], [2254,1293]]
