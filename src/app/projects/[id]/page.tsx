@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../page";
 import FlowingEnergy from "../../../components/flowingEnergy";
-import { prefix } from "@/app/layout";
 
 interface props {
     params: Promise<{id:string}>;
@@ -77,7 +76,7 @@ export default async function Page({ params }:props) {
                     <p className="p-5">{project.description}</p>
                     <div className="relative aspect-5/3 mb-10 mt-5 mx-auto scale-90">
                         <Image
-                        src={`${prefix}/${project.thumbnail}`}
+                        src={project.thumbnail}
                         alt="/next.svg"
                         fill
                         sizes="max-width: 71.1rem"
