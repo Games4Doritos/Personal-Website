@@ -67,7 +67,7 @@ export default function Page() {
       </div>
       <div className="flex justify-center items-center p-8 flex-wrap">
         {links.map((link, id) =>
-          (<SocialIcon url={link} key={id} target="_blank" className="p-10 m-4 hover:scale-105 shadow-[0_0_1rem_gray] rounded-[50%]"/>)
+          (<SocialIcon url={link} key={id} target="_blank" className="p-10 m-4 hover:scale-105 shadow-[0_0_1rem_white] rounded-[50%]"/>)
         )}
       </div>
       <div className="text-xl text-white flex justify-center">

@@ -42,7 +42,7 @@ export default async function Page({ params }:props) {
                     href="/projects"
                     >
                         <div className="hover:text-shadow-[0_0_1rem_black] text-xl text-zinc-700 p-4">
-                            <p className="mr-1 bottom-0.5 relative inline-block " > &larr;</p>
+                            <p className="mr-1 bottom-0.5 relative inline-block"> &larr;</p>
                             Return to All Projects
                         </div>
                     </Link>
@@ -52,12 +52,12 @@ export default async function Page({ params }:props) {
                 </div>
             </div>
             <div
-                className="h-24 bg-white relative shadow-[0_0_1rem_gray] -z-1 mx-auto"
+                className="h-24 bg-white relative shadow-[0_0_1rem_gray] -z-1 mx-auto max-w-40"
                 style={{
                     transform: "rotate(90deg)",
                     width: "calc(max((100% - 64rem)/2, 10%))",
-                    marginTop: "calc((max((100% - 64rem)/2, 10%) - 6rem)/2)",
-                    marginBottom: "calc((max((100% - 64rem)/2, 10%) - 6rem)/2)"
+                    marginTop: "calc(min((max((100% - 64rem)/2, 10%) - 6rem)/2, 2rem))",
+                    marginBottom: "calc(min((max((100% - 64rem)/2, 10%) - 6rem)/2, 2rem))"
                 }}            
                 >
                 <FlowingEnergy colour="crimson"/>
